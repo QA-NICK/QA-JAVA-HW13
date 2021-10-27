@@ -28,15 +28,16 @@ class ProductRepositoryTest {
     @Test
     public void shouldRemoveById() {
 
-        Product [] actual = repository.removeById(2);
-        Product [] expected = new Product[] {one, three,four};
+        Product[] actual = repository.removeById(2);
+        Product[] expected = new Product[]{one, three, four};
         assertArrayEquals(actual, expected);
 
     }
+
     @Test
     public void shouldRemoveByNonexistentId() {
-        assertThrows(NotFoundException.class, () ->{
-         repository.removeById(5);
+        assertThrows(NotFoundException.class, () -> {
+            repository.removeById(5);
         });
 
     }
